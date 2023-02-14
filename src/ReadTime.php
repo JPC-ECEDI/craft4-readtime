@@ -1,6 +1,6 @@
 <?php
 /**
- * Read Time plugin for Craft CMS 3.x
+ * Read Time plugin for Craft CMS
  *
  * Calculate the estimated read time for content.
  *
@@ -15,10 +15,6 @@ use jalendport\readtime\twigextensions\ReadTimeTwigExtension;
 
 use Craft;
 use craft\base\Plugin;
-use craft\services\Plugins;
-use craft\events\PluginEvent;
-
-use yii\base\Event;
 
 class ReadTime extends Plugin
 {
@@ -30,7 +26,7 @@ class ReadTime extends Plugin
     // Public Properties
     // =========================================================================
 
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     // Public Methods
     // =========================================================================
@@ -55,7 +51,7 @@ class ReadTime extends Plugin
     // Protected Methods
     // =========================================================================
 
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?\craft\base\Model
     {
         return new Settings();
     }

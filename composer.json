@@ -26,7 +26,8 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0"
+        "craftcms/cms": "^3.0.0 || ^4.0.0",
+        "verbb/super-table": "^3.0.7"
     },
     "autoload": {
         "psr-4": {
@@ -40,5 +41,11 @@
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/jalendport/craft-readtime/master/CHANGELOG.md",
         "class": "jalendport\\readtime\\ReadTime"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }
